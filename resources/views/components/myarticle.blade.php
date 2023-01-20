@@ -9,7 +9,6 @@
         @yield('create')
     </div>
 
-        <a href='{{ route('mesarticles.index', ['today' => urlencode(Carbon\Carbon::now()->format('m-d-Y'))]) }}'><button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Article du Jour</button></a>
         @foreach (App\Models\Category::all() as $category)
             <a href='{{ route('mesarticles.index', ['categorie' => $category->slug]) }}'><button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">{{ $category->name }}</button></a>
         @endforeach
