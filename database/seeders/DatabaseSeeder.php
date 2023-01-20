@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call(CategoriesTableSeeder::class);
         $this->call(ArticlesSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }
